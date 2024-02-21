@@ -3,14 +3,27 @@
 @tailwind utilities;
 
 
+@font-face {
+    font-family: "SF Pro Rounded";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../public/fonts/SF-Pro-Rounded-Bold.otf");
+}
+
+@font-face {
+    font-family: "SF Pro Rounded";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../public/fonts/SF-Pro-Rounded-Regular.otf");
+  }
 
 @layer base {
      
     h1 {
-      @apply text-[32px] font-bold;
+      @apply font-sf-pro-rounded text-[32px] font-bold;
     }
     p {
-      @apply font-normal text-neutral-400
+      @apply font-sf-pro-rounded font-normal text-neutral-400
     }
     button {
       @apply bg-white border-blue-600/0 border-2 rounded-full flex justify-center items-center focus:outline-none focus:ring-2  focus:ring-blue-600/10 focus:border-blue-600/50 focus:border;
