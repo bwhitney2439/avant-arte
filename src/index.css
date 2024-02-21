@@ -15,5 +15,8 @@
     button {
       @apply bg-white shadow-sm rounded-full flex justify-center items-center;
     }
+    a {
+      @apply bg-white shadow-sm rounded-full flex justify-center items-center;
+    }
 
   }

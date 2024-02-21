@@ -64,20 +64,23 @@ function App() {
           />
           <h1>Home</h1>
           <p className="mb-6 ">Created 2 days ago</p>
-          <button className="w-11 h-11  mx-auto">
+          <button className="w-11 h-11 mx-auto">
             <ShareIcon />
           </button>
         </header>
-        <main className="mb-14">{listItems}</main>
+        <main className="mb-14 flex flex-col gap-6">{listItems}</main>
         <footer className="text-center">
           <p className="mb-3">Follow us</p>
           <div className="flex justify-center items-center">
-            <button className="w-9 h-9 mr-3">
+            <a
+              href="https://www.facebook.com/avantarte/"
+              className="w-9 h-9 mr-3"
+            >
               <FacebookIcon />
-            </button>
-            <button className="w-9 h-9">
+            </a>
+            <a href="https://x.com/avant_arte?s=20" className="w-9 h-9 mr-3">
               <TwitterIcon />
-            </button>
+            </a>
           </div>
         </footer>
       </div>

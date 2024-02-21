@@ -35,10 +35,10 @@ export const List = ({ category, categoryData }: Props) => {
         <p>{`${data.completed} / ${data.total}`}</p>
       </div>
 
-      <ul className="bg-white shadow-sm rounded-xl">
+      <ul className="bg-white shadow-sm rounded-2xl border-g">
         {data.items.map((item) => (
-          <>
-            <li key={item.id} className="flex justify-between p-4">
+          <div key={item.id}>
+            <li className="flex justify-between p-4">
               <div>
                 <label className="inline-flex items-center cursor-pointer">
                   <input
@@ -47,19 +47,22 @@ export const List = ({ category, categoryData }: Props) => {
                     className="hidden peer"
                     onChange={(e) => handleOnChange(e, item)}
                   />
-                  <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 peer-checked:bg-[url('/img/hero-pattern.svg')]">
+                  <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 peer-checked:bg-[url('/img/hero-pattern.svg')] focus:border-">
                     <CheckmarkIcon />
                   </span>
-                  <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400">
+                  <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400 peer-checked:font-normal">
                     {item.name}
                   </p>
                 </label>
               </div>
 
-              <p className="ml-3">x {item.count}</p>
+              <div className="flex">
+                <p className="ml-3">x</p>
+                <p className="ml-3">{item.count}</p>
+              </div>
             </li>
-            <hr className="last:hidden" />
-          </>
+            <hr className="last:hidden mx-4" />
+          </div>
         ))}
       </ul>
     </div>
