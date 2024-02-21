@@ -1,6 +1,8 @@
-export const ShareIcon = () => {
+import { SVGProps } from "react";
+
+export const ShareIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" {...props}>
       <g clipPath="url(#clip0_1_768)">
         <mask
           id="mask0_1_768"
