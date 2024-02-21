@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { CategoryData, Item } from "../App";
 import { CheckmarkIcon } from "./Icons/CheckmarkIcon";
 
@@ -29,15 +29,15 @@ export const List = ({ category, categoryData }: Props) => {
   };
 
   return (
-    <div>
+    <div className="mb-6 break-inside-avoid last:mb-0">
       <div className="flex justify-between items-center p-4 ">
         <p className="font-bold text-neutral-900 capitalize">{category}</p>
         <p>{`${data.completed} / ${data.total}`}</p>
       </div>
 
       <ul className="bg-white shadow-sm rounded-2xl border-g">
-        {data.items.map((item, index) => (
-          <>
+        {data.items.map((item) => (
+          <React.Fragment key={item.id}>
             <div key={item.id}>
               <li className="flex justify-between p-4">
                 <div>
@@ -45,10 +45,10 @@ export const List = ({ category, categoryData }: Props) => {
                     <input
                       id={item.id}
                       type="checkbox"
-                      className="hidden peer"
+                      className="sr-only peer"
                       onChange={(e) => handleOnChange(e, item)}
                     />
-                    <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 peer-checked:bg-[url('/img/hero-pattern.svg')] focus:border-">
+                    <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 focus:border">
                       <CheckmarkIcon />
                     </span>
                     <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400 peer-checked:font-normal">
@@ -64,7 +64,7 @@ export const List = ({ category, categoryData }: Props) => {
               </li>
             </div>
             <hr className="mx-4 last:hidden" />
-          </>
+          </React.Fragment>
         ))}
       </ul>
     </div>

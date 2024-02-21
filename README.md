@@ -8,9 +8,9 @@
 
 ## Outstanding Implementations
 
-1. 2 Column grid at 1440px screen width or higher
-2. Share button.
-3. on Hover and Focus css changes 
+1. Share button.
+2. on Hover and Focus css changes
+3. Implement the "SF Pro Rounded".  Had some issues implementing the font
 
 
 ## React + TypeScript + Vite + Tailwind

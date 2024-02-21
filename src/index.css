@@ -13,10 +13,12 @@
       @apply font-normal text-neutral-400
     }
     button {
-      @apply bg-white shadow-sm rounded-full flex justify-center items-center;
+      @apply bg-white border-blue-600/0 border-2 rounded-full flex justify-center items-center focus:outline-none focus:ring-2  focus:ring-blue-600/10 focus:border-blue-600/50 focus:border;
     }
     a {
-      @apply bg-white shadow-sm rounded-full flex justify-center items-center;
+      @apply bg-white shadow-sm rounded-full flex justify-center items-center focus:outline-none focus:ring-2  focus:ring-blue-600/10 focus:border-blue-600/50 focus:border;
     }
+    
+
 
   }
