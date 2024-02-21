@@ -4,7 +4,7 @@ import View from "./components/View";
 import AvatarImage from "./assets/avatar.png";
 import { ShareIcon } from "./components/Icons/ShareIcon";
 import { FacebookIcon } from "./components/Icons/FacebookIcon";
-import { TwitterIcon } from "./components/Icons/FacebookIcon copy";
+import { TwitterIcon } from "./components/Icons/TwitterIcon";
 import { List } from "./components/List";
 import { useMemo } from "react";
 
