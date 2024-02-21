@@ -58,6 +58,7 @@ function App() {
         <header className="text-center mb-6">
           <img
             src={AvatarImage}
+            alt="Avatar-Image"
             className="mx-auto rounded-full max-h-14 mb-6"
           />
           <h1>Home</h1>
