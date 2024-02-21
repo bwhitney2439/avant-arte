@@ -74,11 +74,11 @@ function App() {
           <div className="flex justify-center items-center">
             <a
               href="https://www.facebook.com/avantarte/"
-              className="w-9 h-9 mr-3"
+              className="size-9 mr-3"
             >
               <FacebookIcon />
             </a>
-            <a href="https://x.com/avant_arte?s=20" className="w-9 h-9 mr-3">
+            <a href="https://x.com/avant_arte?s=20" className="size-9 mr-3">
               <TwitterIcon />
             </a>
           </div>

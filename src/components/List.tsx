@@ -36,33 +36,35 @@ export const List = ({ category, categoryData }: Props) => {
       </div>
 
       <ul className="bg-white shadow-sm rounded-2xl border-g">
-        {data.items.map((item) => (
-          <div key={item.id}>
-            <li className="flex justify-between p-4">
-              <div>
-                <label className="inline-flex items-center cursor-pointer">
-                  <input
-                    id={item.id}
-                    type="checkbox"
-                    className="hidden peer"
-                    onChange={(e) => handleOnChange(e, item)}
-                  />
-                  <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 peer-checked:bg-[url('/img/hero-pattern.svg')] focus:border-">
-                    <CheckmarkIcon />
-                  </span>
-                  <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400 peer-checked:font-normal">
-                    {item.name}
-                  </p>
-                </label>
-              </div>
+        {data.items.map((item, index) => (
+          <>
+            <div key={item.id}>
+              <li className="flex justify-between p-4">
+                <div>
+                  <label className="inline-flex items-center cursor-pointer">
+                    <input
+                      id={item.id}
+                      type="checkbox"
+                      className="hidden peer"
+                      onChange={(e) => handleOnChange(e, item)}
+                    />
+                    <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 peer-checked:bg-[url('/img/hero-pattern.svg')] focus:border-">
+                      <CheckmarkIcon />
+                    </span>
+                    <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400 peer-checked:font-normal">
+                      {item.name}
+                    </p>
+                  </label>
+                </div>
 
-              <div className="flex">
-                <p className="ml-3">x</p>
-                <p className="ml-3">{item.count}</p>
-              </div>
-            </li>
-            <hr className="last:hidden mx-4" />
-          </div>
+                <div className="flex">
+                  <p className="ml-3">x</p>
+                  <p className="ml-3">{item.count}</p>
+                </div>
+              </li>
+            </div>
+            <hr className="mx-4 last:hidden" />
+          </>
         ))}
       </ul>
     </div>
