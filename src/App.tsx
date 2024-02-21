@@ -48,6 +48,10 @@ function App() {
 
   const decoratedData = useMemo(() => decorateData(query.data), [query.data]);
 
+  const sortedData = useMemo(() => {
+    return Object.entries(decoratedData).sort();
+  }, [decoratedData]);
+
   return (
     <View query={query}>
       <div className="max-w-2xl mx-auto py-14 px-6 min-h-screen">
@@ -63,15 +67,13 @@ function App() {
           </button>
         </header>
         <main className="columns-1 2xl:columns-2 gap-6 mb-14">
-          {Object.entries(decoratedData)
-            .sort()
-            .map(([category, categoryData]) => (
-              <List
-                key={category}
-                category={category}
-                categoryData={categoryData}
-              />
-            ))}
+          {sortedData.map(([category, categoryData]) => (
+            <List
+              key={category}
+              category={category}
+              categoryData={categoryData}
+            />
+          ))}
         </main>
         <footer className="text-center">
           <p className="mb-3">Follow us</p>
