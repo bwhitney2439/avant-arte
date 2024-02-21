@@ -16,15 +16,15 @@ export const List = ({ category, categoryData }: Props) => {
     const isChecked = e.target.checked;
 
     if (isChecked) {
-      setData({
-        ...data,
+      setData((prev) => ({
+        ...prev,
         completed: data.completed + item.count,
-      });
+      }));
     } else {
-      setData({
-        ...data,
+      setData((prev) => ({
+        ...prev,
         completed: data.completed - item.count,
-      });
+      }));
     }
   };
 

@@ -82,7 +82,7 @@ function App() {
             >
               <FacebookIcon />
             </a>
-            <a href="https://x.com/avant_arte?s=20" className="size-9 mr-3">
+            <a href="https://x.com/avant_arte?s=20" className="size-9">
               <TwitterIcon />
             </a>
           </div>
