@@ -48,10 +48,7 @@ export const List = ({ category, categoryData }: Props) => {
                       className="sr-only peer"
                       onChange={(e) => handleOnChange(e, item)}
                     />
-                    <span
-                      tabIndex={0}
-                      className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center peer-checked:bg-blue-600 focus:outline-none focus:ring-2  focus:ring-blue-600/10 focus:border-blue-600/50 focus:border"
-                    >
+                    <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center outline outline-none peer-checked:bg-blue-600 peer-focus:outline-none peer-focus:ring-2  peer-focus:ring-blue-600/10 peer-focus:border-blue-600/50 peer-focus:border">
                       <CheckmarkIcon />
                     </span>
                     <p className="text-neutral-900 font-bold peer-checked:line-through peer-checked:text-neutral-400 peer-checked:font-normal">
