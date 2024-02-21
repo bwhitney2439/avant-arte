@@ -58,8 +58,8 @@ function App() {
           />
           <h1>Home</h1>
           <p className="mb-6 ">Created 2 days ago</p>
-          <button className="w-11 h-11 mx-auto">
-            <ShareIcon />
+          <button className="w-11 h-11 mx-auto group">
+            <ShareIcon className="group-hover:opacity-50" />
           </button>
         </header>
         <main className="columns-1 2xl:columns-2 gap-6 mb-14">
@@ -78,12 +78,12 @@ function App() {
           <div className="flex justify-center items-center">
             <a
               href="https://www.facebook.com/avantarte/"
-              className="size-9 mr-3"
+              className="size-9 mr-3 group"
             >
-              <FacebookIcon />
+              <FacebookIcon className="group-hover:opacity-50" />
             </a>
-            <a href="https://x.com/avant_arte?s=20" className="size-9">
-              <TwitterIcon />
+            <a href="https://x.com/avant_arte?s=20" className="size-9 group">
+              <TwitterIcon className="group-hover:opacity-50" />
             </a>
           </div>
         </footer>
