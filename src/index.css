@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+     
+    h1 {
+      @apply text-[32px] font-bold;
+    }
+    p {
+      @apply font-normal text-neutral-400
+    }
+    button {
+      @apply bg-white shadow-sm rounded-full flex justify-center items-center;
+    }
+
+  }
