@@ -47,7 +47,6 @@ export const List = ({ category, categoryData }: Props) => {
                       type="checkbox"
                       className="sr-only peer"
                       onChange={(e) => handleOnChange(e, item)}
-                      aria-label={`Mark ${item.name} as completed`}
                     />
                     <span className="w-6 h-6 mr-3 rounded-full border shadow-sm flex items-center justify-center outline outline-none peer-checked:bg-blue-600 peer-focus:outline-none peer-focus:ring-2  peer-focus:ring-blue-600/10 peer-focus:border-blue-600/50 peer-focus:border">
                       <CheckmarkIcon />
